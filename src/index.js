@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { QueryClientProvider, QueryClient } from 'react-query'
 import App from 'pages';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
@@ -8,11 +9,15 @@ import { store } from 'storeRedux'
 
 import 'element-theme-default';
 
+const queryClient = new QueryClient()
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store} >
-      <App />
-    </Provider>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store} >
+        <App />
+      </Provider>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
