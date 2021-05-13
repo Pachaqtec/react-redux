@@ -34,6 +34,9 @@ const Header = () => {
         <Link to="/home">
           Home
         </Link>
+        <Link to="/user">
+          User
+        </Link>
         <Link to="/others">
           Others
         </Link>

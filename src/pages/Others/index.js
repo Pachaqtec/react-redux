@@ -8,7 +8,7 @@ const Others = () => {
   const query = useQueryClient()
   const [num, setNum ] = useState(0)
   const user = useSelector((store) => store.user.list)
-  console.log('Others', query)
+  // console.log('Others', query)
   return (
     <div>
       Others
